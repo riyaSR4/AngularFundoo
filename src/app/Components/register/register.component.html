@@ -1,0 +1,70 @@
+<div class="main">
+    <form [formGroup]="RegisterForm" (ngSubmit)="onSubmit()">
+        <div class="container">
+            <div class="inner-container">
+                <div class="heading">
+                    <h1 class="fundoo">
+                        <span style="color:dodgerblue;">F</span>
+                        <span style="color:red;">u</span>
+                        <span style="color:yellow;">n</span>
+                        <span style="color:green;">d</span>
+                        <span style="color:red">o</span>
+                        <span style="color:red">o</span>
+                    </h1>
+                    <h2>Create your Account</h2>
+                    <h3>Continue to Gmail</h3>
+                </div>
+                <div style="width: 100%" class="fullname">
+                    <mat-form-field appearance="outline" class="name">
+                        <mat-label>First Name</mat-label>
+                        <input matInput placeholder="First Name" formControlName="firstname" />
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="name">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput placeholder="Last Name" formControlName="lastname" />
+                    </mat-form-field>
+                </div>
+                <div style="width: 100%">
+                    <mat-form-field appearance="outline" style="width: 100%">
+                        <mat-label>Username</mat-label>
+                        <input matInput placeholder="Username" formControlName="email" />
+                        <!-- <span matTextSuffix>@gmail.com</span> -->
+                        <mat-hint>You can use letters,numbers and periods</mat-hint>
+                    </mat-form-field>
+                </div>
+                <div style="width: 100%">
+                    <mat-form-field appearance="outline" style="width: 100%">
+                        <mat-label>Phonenumber</mat-label>
+                        <input matInput placeholder="Phonenumber" formControlName="phonenumber" />
+                    </mat-form-field>
+                </div>
+                <div style="width: 100%;">
+                    <div class="fullname">
+                        <mat-form-field appearance="outline" class="name">
+                            <mat-label>Password</mat-label>
+                            <input matInput type="password" placeholder="Password" formControlName="password" />
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="name">
+                            <mat-label>Confirm</mat-label>
+                            <input matInput type="password" placeholder="Confirm" formControlName="confirm" />
+                        </mat-form-field>
+                    </div>
+                    <p class="passwordhint">Use 8 0r more characters with a mix of letters, numbers & symbols</p>
+                </div>
+                <!-- <div style="width: 100%">
+                    <mat-checkbox class="pwd">Show Password</mat-checkbox> 
+                </div> -->
+                <div style="width: 100%" class="button-row">
+                    <a mat-flat-button href="" target="_blank" routerLink="/login" class="signin">Sign in Instead</a>
+                    <button mat-flat-button class="button">Next</button>
+                </div>
+
+            </div>
+
+            <div class="image">
+                <img
+                    src="https://www.kindpng.com/picc/m/182-1822355_google-account-products-icons-google-account-icon-hd.png" />
+            </div>
+        </div>
+    </form>
+</div>

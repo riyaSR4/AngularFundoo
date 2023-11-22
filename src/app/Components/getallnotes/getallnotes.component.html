@@ -1,0 +1,7 @@
+<app-createnote (refreshEvent)="dataFromChild($event)"></app-createnote>
+<div class="container">
+    <div class="inner-container"
+        *ngFor="let note of noteListarray">
+        <app-displaynote [note]=note/>
+    </div>
+</div>

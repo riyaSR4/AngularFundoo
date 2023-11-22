@@ -1,0 +1,73 @@
+<div class="main">
+    <div *ngIf="!fullView" (click)="openFullView()" class="innerup">
+        <div>
+            <input type="text" placeholder="Take a note..." class="title">
+        </div>
+        <div *ngIf="!fullView">
+            <button mat-icon-button class="icon-top">
+                <span class="material-symbols-outlined">
+                    check_box
+                </span>
+            </button>
+            <button mat-icon-button class="icon-top">
+                <span class="material-symbols-outlined">
+                    brush
+                </span>
+            </button>
+            <button mat-icon-button class="icon-top">
+                <span class="material-symbols-outlined">
+                    image
+                </span>
+            </button>
+        </div>
+    </div>
+    <div *ngIf="fullView" class="innerbelow">
+        <div>
+            <div>
+                <input type="text" placeholder="Title" class="title" [(ngModel)]="title">
+                <button mat-icon-button class="push_pin">
+                    <span class="material-symbols-outlined">
+                        push_pin
+                    </span>
+                </button>
+            </div>
+            <textarea type="text" placeholder="Take a note..." class="description" [(ngModel)]="description">
+
+            </textarea>
+        </div>
+        <div class="bottomicons">
+            <app-icons></app-icons>
+            <button mat-icon-button class="icon">
+                <span class="material-symbols-outlined">
+                    undo
+                </span>
+            </button>
+            <button mat-icon-button class="icon">
+                <span class="material-symbols-outlined">
+                    redo
+                </span>
+            </button>
+            <button mat-button class="close" (click)="CreateNote()" >Close</button>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container">
+    <mat-accordion class="inner-container">
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header class="header">
+                <mat-panel-title class="title">
+                    Title
+                </mat-panel-title>
+                <div class="icons">
+                    <mat-panel-description class="desc">
+                        <mat-icon>check box</mat-icon>
+                        <mat-icon>draw</mat-icon>
+                        <mat-icon>image</mat-icon>
+                    </mat-panel-description>
+                </div>
+            </mat-expansion-panel-header>
+            <p>Take a note.</p>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div> -->

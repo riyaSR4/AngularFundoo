@@ -1,0 +1,40 @@
+.title{
+    width: 400px;
+    height: 30px;
+    border:none;
+    margin-left: 3%;
+    position: relative;
+    top: 10px;
+}
+.description{
+    width: 400px;
+    height: 30px;
+    border:none;
+    margin-left: 3%;
+    position: relative;
+    top: 15px;
+}
+.push_pin{
+    border: none;
+    border-radius: 50%;
+    margin-left: 20%;
+    background-color: white;
+    position: relative;
+    top: 17px;
+}
+.bottomicons{
+    display: flex;
+    margin-left: 2%;
+}
+.close{
+    margin-left: 45%;
+    border: none;
+    background-color: white;
+    margin-top: 11%;
+}
+.icon{
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: white;
+  }

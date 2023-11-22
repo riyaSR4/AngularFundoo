@@ -1,0 +1,92 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-toolbar{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .example-is-mobile .example-toolbar {
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2;
+  }
+  
+  h1.example-app-name {
+    margin-left: 8px;
+  }
+  
+  .example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+  }
+  
+  .example-is-mobile .example-sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+  }
+  .search{
+    padding-top: 22px;
+    width: 50%;
+    height: 75px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    position: relative;
+    left: 40px;
+  }
+  .icons{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  .icon{
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    //background-color: white;
+  }
+  .icons-1{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: 120px;
+  }
+  .icons-2{
+    width: 40%;
+    display: flex;
+    position: relative;
+    left: 120px;
+  }
+
+  .router{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+  }
+  .menu{
+    width: 15%;
+  }
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 18;
+    padding-right: 8px;;
+    position: relative;
+    top:5px;
+  }
+  
