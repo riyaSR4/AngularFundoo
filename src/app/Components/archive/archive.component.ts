@@ -28,5 +28,6 @@ export class ArchiveComponent {
       this.noteListarray = this.noteList.data;
       console.log("Only array ", this.noteList.data);
     })
+    
   }
 }

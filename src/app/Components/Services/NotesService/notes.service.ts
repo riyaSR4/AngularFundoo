@@ -63,5 +63,25 @@ export class NotesService {
     }
     return this.httpService.PutService('Notes/ArchieveNote?noteId='+noteId+'&userId='+localStorage.getItem('Id'),{}, false, httpAuthOptions)
   }
+  getAllTrashNotesService(){
+    this.token = localStorage.getItem('token')
+    let httpAuthOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: this.token
+      })
+    }
+    return this.httpService.GetService('Notes/GetAllTrashNotes?userId='+localStorage.getItem('Id') , true, httpAuthOptions)
+  }
+  trashNotesService(noteId:any){
+    this.token = localStorage.getItem('token')
+    let httpAuthOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: this.token
+      })
+    }
+    return this.httpService.PutService('Notes/DeleteNote?noteId='+noteId+'&userId='+localStorage.getItem('Id'),{}, false, httpAuthOptions)
+  }
 
 }

@@ -1,43 +1,55 @@
 <link rel="stylesheet"
-href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
     <mat-toolbar class="example-toolbar">
         <button mat-icon-button (click)="snav.toggle()" class="icon">
-            <mat-icon>menu</mat-icon>
+            <mat-icon class="menusymbol">menu</mat-icon>
         </button>
-        <h1 class="example-app-name">Fundoo Notes</h1>
+        <h1 class="example-app-name">
+            <span style="color:dodgerblue;">F</span>
+                    <span style="color:red;">u</span>
+                    <span style="color:yellow;">n</span>
+                    <span style="color:green;">d</span>
+                    <span style="color:red">o</span>
+                    <span style="color:red">o&nbsp;</span>
+                    <span style="color:dodgerblue;">&nbsp;N</span>
+                    <span style="color:red;">o</span>
+                    <span style="color:yellow;">t</span>
+                    <span style="color:green;">e</span>
+                    <span style="color:red">s</span>
+        </h1>
         <mat-form-field class="search">
             <mat-icon matSuffix>search</mat-icon>
-            <input type="text" matInput placeholder="Search">
+            <input type="text" matInput placeholder="Search" (keyup)="searchNotes($event)">
         </mat-form-field>
         <div class="icons">
             <div class="icons-1">
                 <button mat-icon-button (click)="snav.toggle()" class="icon">
                     <span class="material-symbols-outlined">
                         refresh
-                        </span>
+                    </span>
                 </button>
                 <button mat-icon-button class="icon">
                     <span class="material-symbols-outlined">
                         list
-                        </span>
+                    </span>
                 </button>
                 <button mat-icon-button class="icon">
                     <span class="material-symbols-outlined">
                         settings
-                        </span>
+                    </span>
                 </button>
             </div>
             <div class="icons-2">
                 <button mat-icon-button class="icon">
                     <span class="material-symbols-outlined">
                         apps
-                        </span>
+                    </span>
                 </button>
                 <button mat-icon-button class="icon">
                     <span class="material-symbols-outlined">
                         account_circle
-                        </span>
+                    </span>
                 </button>
             </div>
         </div>
@@ -50,37 +62,37 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wg
                 <a mat-list-item routerLink="getallnotes">
                     <span class="material-symbols-outlined">
                         lightbulb
-                    </span> 
+                    </span>
                     Notes
                 </a>
                 <a mat-list-item routerLink=".">
                     <span class="material-symbols-outlined">
                         Notifications
-                    </span> 
+                    </span>
                     Reminders
                 </a>
                 <a mat-list-item routerLink=".">
                     <span class="material-symbols-outlined">
                         Edit
-                    </span> 
+                    </span>
                     Edit labels
                 </a>
                 <a mat-list-item routerLink="archive">
                     <span class="material-symbols-outlined">
                         Archive
-                    </span> 
+                    </span>
                     Archive
                 </a>
                 <a mat-list-item routerLink="trash">
                     <span class="material-symbols-outlined">
                         Delete
-                    </span> 
+                    </span>
                     Trash
                 </a>
             </mat-nav-list>
         </mat-sidenav>
 
-        <mat-sidenav-content>
+        <mat-sidenav-content class="content">
             <div class="router">
                 <!-- <p *ngFor="let content of fillerContent">{{content}}</p> -->
                 <router-outlet></router-outlet>

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NotesService } from 'src/app/Components/Services/NotesService/notes.service'
+import { DataService } from '../Services/DataService/data.service';
 
 
 @Component({
@@ -9,15 +10,21 @@ import { NotesService } from 'src/app/Components/Services/NotesService/notes.ser
 })
 export class GetallnotesComponent implements OnInit {
 
+  searchText:any
   //@Input() NotesArrayList:any
   noteList?: any = [];
   noteListarray?: any = [];
-  constructor(private noteService: NotesService) {
+  constructor(private noteService: NotesService,private dataService: DataService) {
 
   }
   // read about component life cycle hook
   ngOnInit(): void {
     this.getAllNotes()
+
+    this.dataService.receivedData.subscribe((res:any)=>{
+      console.log(res);
+      this.searchText = res
+    });
   }
 
   getAllNotes() {

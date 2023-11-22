@@ -28,6 +28,8 @@ import { DisplaynoteComponent } from './Components/displaynote/displaynote.compo
 import { IconsComponent } from './Components/icons/icons.component';
 import { ArchiveComponent } from './Components/archive/archive.component';
 import { TrashComponent } from './Components/trash/trash.component';
+import { SearchfilterPipe } from './Components/Pipes/SearchFilter/searchfilter.pipe';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,7 @@ import { TrashComponent } from './Components/trash/trash.component';
     IconsComponent,
     ArchiveComponent,
     TrashComponent,
+    SearchfilterPipe,
     
   ],
   imports: [
@@ -63,7 +66,8 @@ import { TrashComponent } from './Components/trash/trash.component';
     MatCardModule,
     MatExpansionModule,
     MatDialogModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

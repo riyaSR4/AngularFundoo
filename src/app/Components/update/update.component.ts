@@ -50,5 +50,6 @@ export class UpdateComponent {
         this.dialogRef.close();
         this.refreshEvent.emit(res)
       })
+      location.reload();
   }
 }

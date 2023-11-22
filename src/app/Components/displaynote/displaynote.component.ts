@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { UpdateComponent } from '../update/update.component';
 
@@ -7,11 +7,15 @@ import { UpdateComponent } from '../update/update.component';
   templateUrl: './displaynote.component.html',
   styleUrls: ['./displaynote.component.scss']
 })
-export class DisplaynoteComponent {
+export class DisplaynoteComponent implements OnInit {
+  
   @Input() note:any;
   constructor(public dialog: MatDialog) {
 
   
+  }
+  ngOnInit(): void {
+   
   }
 
   openDialog(note:any,noteId:any){

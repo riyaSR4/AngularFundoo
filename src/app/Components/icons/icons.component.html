@@ -26,10 +26,16 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wg
             archive
         </span>
     </button>
-    <button mat-icon-button class="icon">
+    <button mat-icon-button class="icon" [matMenuTriggerFor]="menu">
         <span class="material-symbols-outlined icons" >
             more_vert
         </span>
     </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="trash()" >
+            <span>Delete Note</span>
+        </button>
+      </mat-menu>
+    
  
 </div>

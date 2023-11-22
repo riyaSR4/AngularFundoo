@@ -31,6 +31,10 @@ export class CreatenoteComponent {
       description: this.description,
       id: +this.id
     }
+    if(this.title == null && this.description == null)
+    {
+      this.fullView=false
+    }
     if(this.title !== '' || this.description !== ''){
       //api integration
       this.notesService.createNoteService(reqData).subscribe((res:any)=>{
